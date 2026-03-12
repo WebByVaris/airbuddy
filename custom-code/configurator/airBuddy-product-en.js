@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
         }, 500);
 	}
 
-    // HARNESS SIZE - 1st DIVER
+    // HARNESS SIZE - 1st DIVERs
     var sizeDescription = $("ul[data-name='attribute_pa_harness-size-1st']");
 
     sizeDescription.append("<li class='airBuddyDescription airBuddySize-s-m'>Chest size<br class='br-hide'> 80 ~ 100 cm</li>");
