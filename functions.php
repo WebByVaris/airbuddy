@@ -55,6 +55,8 @@ function enqueue_airbuddy_product_en()
 	$uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
 	if (strpos($uri, '/fr/produit/configurateur/') !== false) {
 		wp_enqueue_script('airbuddy-product-fr', get_stylesheet_directory_uri() . '/custom-code/configurator/airBuddy-product-fr.js', array('jquery'), null, true);
+	} elseif (strpos($uri, '/de/produkt/konfigurator/') !== false) {
+		wp_enqueue_script('airbuddy-product-de', get_stylesheet_directory_uri() . '/custom-code/configurator/airBuddy-product-de.js', array('jquery'), null, true);
 	} elseif (strpos($uri, '/es/producto/configurador/') !== false) {
 		wp_enqueue_script('airbuddy-product-es', get_stylesheet_directory_uri() . '/custom-code/configurator/airBuddy-product-es.js', array('jquery'), null, true);
 	} elseif (strpos($uri, '/product/configurator/') !== false) {
