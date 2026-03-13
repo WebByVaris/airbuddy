@@ -1,6 +1,5 @@
 var interval = null;
 jQuery(document).ready(function($) {
-	
 	 $('.variations tr').each(function() {
         var row = $(this);
         if (row.find('ul.filter-item-list').length) return;
@@ -37,7 +36,7 @@ jQuery(document).ready(function($) {
 			label.show();
         }
     });
-  
+	
     function turnOffElements(elementsArray) {
         elementsArray.each(function(i, e){
             $(e).css("display","none");
@@ -66,16 +65,16 @@ jQuery(document).ready(function($) {
         }, 500);
 	}
 
-    // HARNESS SIZE - 1st DIVERs
+    // HARNESS SIZE - 1st DIVER
     var sizeDescription = $("ul[data-name='attribute_pa_harness-size-1st']");
 
-    sizeDescription.append("<li class='airBuddyDescription airBuddySize-s-m'>Chest size<br class='br-hide'> 80 ~ 100 cm</li>");
-    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-l-xl'>Chest size<br class='br-hide'> 100 ~ 112 cm</li>");
-    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-2xl-3xl'>Chest size<br class='br-hide'> 112 ~ 125 cm</li>");
+    sizeDescription.append("<li class='airBuddyDescription airBuddySize-s-m'>Talla del pecho<br class='br-hide'> 80 ~ 100 cm</li>");
+    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-l-xl'>Talla del pecho<br class='br-hide'> 100 ~ 112 cm</li>");
+    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-2xl-3xl'>Talla del pecho<br class='br-hide'> 112 ~ 125 cm</li>");
     
-    var smallButton = $("a[data-value='s-m']");
-    var largeButton = $("a[data-value='l-xl']");
-    var extraLargeButton = $("a[data-value='2xl-3xl']");
+    var smallButton = $("a[data-value='s-m-es']");
+    var largeButton = $("a[data-value='l-xl-es']");
+    var extraLargeButton = $("a[data-value='2xl-3xl-es']");
     
     var harnessArr = $(".airBuddySize-s-m, .airBuddySize-l-xl, .airBuddySize-2xl-3xl");
 
@@ -112,15 +111,14 @@ jQuery(document).ready(function($) {
 // HARNESS SIZE - 2nd DIVER
     var sizeDescription = $("ul[data-name='attribute_pa_harness-size-2nd']");
 
-    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-sm'>Chest size<br class='br-hide'> 80 ~ 100 cm</li>");
-    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-lxl'>Chest size<br class='br-hide'> 100 ~ 112 cm</li>");
-    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-2xl3xl'>Chest size<br class='br-hide'> 112 ~ 125 cm</li>");
+    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-sm'>Talla del pecho<br class='br-hide'> 80 ~ 100 cm</li>");
+    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-lxl'>Talla del pecho<br class='br-hide'> 100 ~ 112 cm</li>");
+    sizeDescription.append("<li class='airBuddyShow airBuddyDescription airBuddySize-2xl3xl'>Talla del pecho<br class='br-hide'> 112 ~ 125 cm</li>");
 	sizeDescription.find("li:nth-child(2)").addClass('active');
-	
-    var smallButtonTwo = $("a[data-value='sm']");
-    var largeButtonTwo = $("a[data-value='lxl']");
-    var extraLargeButtonTwo = $("a[data-value='2xl3xl']");
-    var noButton = $("a[data-value='no']");
+    var smallButtonTwo = $("a[data-value='sm-es']");
+    var largeButtonTwo = $("a[data-value='lxl-es']");
+    var extraLargeButtonTwo = $("a[data-value='2xl3xl-es']");
+    var noButton = $("a[data-value='no-es']");
 
     var harnessTwoArr = $(".airBuddySize-sm, .airBuddySize-lxl, .airBuddySize-2xl3xl");
 
@@ -161,8 +159,8 @@ jQuery(document).ready(function($) {
 // Dive Flag Type
     var diveFlagDescription = $("ul[data-name='attribute_pa_flag-type']");
 
-    diveFlagDescription.append("<li class='airBuddyDescription airBuddyRedWhite'>North America, <br class='br-hide'>Italy, Switzerland</li>");
-    diveFlagDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyAlpha'>International</li>");
+    diveFlagDescription.append("<li class='airBuddyDescription airBuddyRedWhite'>Norteamérica, <br class='br-hide'>Italia, Suiza</li>");
+    diveFlagDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyAlpha'>Internacional</li>");
 
     var redWhiteButton = $("a[data-value='red-white']");
 	var alphaButton = $("a[data-value='alpha']");
@@ -192,13 +190,13 @@ jQuery(document).ready(function($) {
 // Charger Plug
     var chargerDescription = $("ul[data-name='attribute_pa_charger']");
 
-    chargerDescription.append("<li class='airBuddyDescription airBuddyB'>USA, Canada, Mexico, <br class='br-hide'>Japan, Thailand, Taiwan</li>");
-    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyI'>Australia, New Zealand, <br class='br-hide'>China, Argentina, Fiji</li>");
-    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyCef'>Most EU, Parts of Asia, <br class='br-hide'>Parts of South America</li>");
-    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyG'>UK, Ireland, Malta, HK, <br class='br-hide'>Singapore, Middle East</li>");
-    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyJ'>Switzerland</li>");
+    chargerDescription.append("<li class='airBuddyDescription airBuddyB'>Estados Unidos, Canadá, México, <br class='br-hide'>Japón, Tailandia, Taiwán</li>");
+    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyI'>Australia, Nueva Zelanda, <br class='br-hide'>China, Argentina, Fiyi</li>");
+    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyCef'>La mayor parte de la UE, partes de Asia, <br class='br-hide'>partes de América del Sur</li>");
+    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyG'>Reino Unido, Irlanda, Malta, Hong Kong, <br class='br-hide'>Singapur, Oriente Medio</li>");
+    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyJ'>Suiza</li>");
     chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyH'>Israel</li>");
-    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyM'>South Africa, India</li>");
+    chargerDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyM'>Sudáfrica, India</li>");
 
     var bButton = $("a[data-value='b']");
     var iButton = $("a[data-value='i']");
@@ -283,19 +281,19 @@ jQuery(document).ready(function($) {
 // Language
     var languageDescription = $("ul[data-name='attribute_pa_manual-language']");
 
-    languageDescription.append("<li class='airBuddyDescription airBuddyEng'>English</li>");
-    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyGer'>German</li>");
-    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyFra'>French</li>");
-    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyEsp'>Spanish</li>");
-    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyIta'>Italian</li>");
-    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyCze'>Czech</li>");
+    languageDescription.append("<li class='airBuddyDescription airBuddyEng'>Inglés</li>");
+    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyGer'>Alemán</li>");
+    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyFra'>Francés</li>");
+    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyEsp'>Español</li>");
+    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyIta'>Italiano</li>");
+    languageDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyCze'>Checo</li>");
 
-    var engButton = $("a[data-value='eng']");
-    var gerButton = $("a[data-value='ger']");
-    var fraButton = $("a[data-value='fra']");
-    var espButton = $("a[data-value='esp']");
-    var itaButton = $("a[data-value='ita']");
-    var czeButton = $("a[data-value='cze']");
+    var engButton = $("a[data-value='eng-es']");
+    var gerButton = $("a[data-value='ger-es']");
+    var fraButton = $("a[data-value='fra-es']");
+    var espButton = $("a[data-value='esp-es']");
+    var itaButton = $("a[data-value='ita-es']");
+    var czeButton = $("a[data-value='cze-es']");
 
     var languageArr = $(".airBuddyEng, .airBuddyGer, .airBuddyFra, .airBuddyEsp, .airBuddyIta, .airBuddyCze");
 
@@ -359,18 +357,18 @@ jQuery(document).ready(function($) {
             turnOffElements(languageArr);
         }
     });
-// DIVER SETUP        
+// DIVER SETUP
     var diverDescription = $("ul[data-name='attribute_pa_diver-setup']");
 
-    diverDescription.append("<li class='airBuddyDescription airBuddySingle'>One diver<br class='br-hide'> up to 12m</li>");
-    diverDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyBuddy'>Two divers<br class='br-hide'> up to 6&6m</li>");
-    diverDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyCombo'>One diver up to 12m or<br class='br-hide'> two divers up to 6&6m</li>");
-    diverDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyDuo'>Two divers<br class='br-hide'> up to 12m</li>");
+    diverDescription.append("<li class='airBuddyDescription airBuddySingle'>Un buceador<br class='br-hide'> de hasta 12m</li>");
+    diverDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyBuddy'>Dos buceadores<br class='br-hide'> de hasta 6&6m</li>");
+    diverDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyCombo'>Un buceador de hasta 12m o<br class='br-hide'> dos buceadores de hasta 6&6m</li>");
+    diverDescription.append("<li class='airBuddyShow airBuddyDescription airBuddyDuo'>Dos buceadores <br class='br-hide'> de hasta 12m</li>");
 
-    var singleButton = $("a[data-value='single']");
-    var buddyButton = $("a[data-value='buddy']");
-    var comboButton = $("a[data-value='combo']");
-    var duoButton = $("a[data-value='duo']");
+    var singleButton = $("a[data-value='single-es']");
+    var buddyButton = $("a[data-value='buddy-es']");
+    var comboButton = $("a[data-value='combo-es']");
+    var duoButton = $("a[data-value='duo-es']");
 
     var diverImagesArr = $(".airBuddySingle, .airBuddyBuddy, .airBuddyCombo, .airBuddyDuo");
 
@@ -393,7 +391,7 @@ jQuery(document).ready(function($) {
     }
 
     var chargerValues = ["b","i","cef","g","j","h","m"];
-    var languageValues = ["eng","ger","fra","esp","ita","cze"];
+    var languageValues = ["eng-es","ger-es","fra-es","esp-es","ita-es","cze-es"];
 
     function applyDiverSetupUI() {
         var gallery = ensureGalleryHasDiverImages();
@@ -409,12 +407,12 @@ jQuery(document).ready(function($) {
         buddyDescription.css("display","none");
         comboDescription.css("display","none");
         duoDescription.css("display","none");
-        if (setup === "single") {
+        if (setup === "single-es") {
             turnOffElements(allElementsArr);
             if (harness1st) {
-                if (harness1st === "s-m") $(harnessArr[0]).css("display","list-item");
-                else if (harness1st === "l-xl") $(harnessArr[1]).css("display","list-item");
-                else if (harness1st === "2xl-3xl") $(harnessArr[2]).css("display","list-item");
+                if (harness1st === "s-m-es") $(harnessArr[0]).css("display","list-item");
+                else if (harness1st === "l-xl-es") $(harnessArr[1]).css("display","list-item");
+                else if (harness1st === "2xl-3xl-es") $(harnessArr[2]).css("display","list-item");
             }
             $(harnessTwoArr[0]).css("display","list-item");
             if (flag) { turnOffElements(diveFlagArr); $(diveFlagArr[flag === "alpha" ? 1 : 0]).css("display","list-item"); }
@@ -423,55 +421,55 @@ jQuery(document).ready(function($) {
             harnessTwo.css("display","none");
             gallery.find(".airBuddySingle").first().css("display","block");
             singleDescription.css("display","list-item");
-        } else if (setup === "buddy") {
+        } else if (setup === "buddy-es") {
             turnOffElements(harnessTwoArr);
-            if (harness2nd === "sm") $(harnessTwoArr[0]).css("display","list-item");
-            else if (harness2nd === "lxl") $(harnessTwoArr[1]).css("display","list-item");
-            else if (harness2nd === "2xl3xl") $(harnessTwoArr[2]).css("display","list-item");
+            if (harness2nd === "sm-es") $(harnessTwoArr[0]).css("display","list-item");
+            else if (harness2nd === "lxl-es") $(harnessTwoArr[1]).css("display","list-item");
+            else if (harness2nd === "2xl3xl-es") $(harnessTwoArr[2]).css("display","list-item");
             harnessTwo.css("display","block");
             gallery.find(".airBuddyBuddy").first().css("display","block");
             buddyDescription.css("display","list-item");
             if (harness1st) {
                 turnOffElements(harnessArr);
-                if (harness1st === "s-m") $(harnessArr[0]).css("display","list-item");
-                else if (harness1st === "l-xl") $(harnessArr[1]).css("display","list-item");
-                else if (harness1st === "2xl-3xl") $(harnessArr[2]).css("display","list-item");
+                if (harness1st === "s-m-es") $(harnessArr[0]).css("display","list-item");
+                else if (harness1st === "l-xl-es") $(harnessArr[1]).css("display","list-item");
+                else if (harness1st === "2xl-3xl-es") $(harnessArr[2]).css("display","list-item");
             }
             if (flag) { turnOffElements(diveFlagArr); $(diveFlagArr[flag === "alpha" ? 1 : 0]).css("display","list-item"); }
             if (charger) { turnOffElements(chargerArr); $(chargerArr[chargerValues.indexOf(charger)]).css("display","list-item"); }
             if (language) { turnOffElements(languageArr); $(languageArr[languageValues.indexOf(language)]).css("display","list-item"); }
-        } else if (setup === "combo") {
+        } else if (setup === "combo-es") {
             turnOffElements(harnessTwoArr);
-            if (harness2nd === "sm") $(harnessTwoArr[0]).css("display","list-item");
-            else if (harness2nd === "lxl") $(harnessTwoArr[1]).css("display","list-item");
-            else if (harness2nd === "2xl3xl") $(harnessTwoArr[2]).css("display","list-item");
+            if (harness2nd === "sm-es") $(harnessTwoArr[0]).css("display","list-item");
+            else if (harness2nd === "lxl-es") $(harnessTwoArr[1]).css("display","list-item");
+            else if (harness2nd === "2xl3xl-es") $(harnessTwoArr[2]).css("display","list-item");
             harnessTwo.css("display","block");
             gallery.find(".airBuddyCombo").first().css("display","block");
             comboDescription.css("display","list-item");
             if (harness1st) {
                 turnOffElements(harnessArr);
-                if (harness1st === "s-m") $(harnessArr[0]).css("display","list-item");
-                else if (harness1st === "l-xl") $(harnessArr[1]).css("display","list-item");
-                else if (harness1st === "2xl-3xl") $(harnessArr[2]).css("display","list-item");
+                if (harness1st === "s-m-es") $(harnessArr[0]).css("display","list-item");
+                else if (harness1st === "l-xl-es") $(harnessArr[1]).css("display","list-item");
+                else if (harness1st === "2xl-3xl-es") $(harnessArr[2]).css("display","list-item");
             }
             if (flag) { turnOffElements(diveFlagArr); $(diveFlagArr[flag === "alpha" ? 1 : 0]).css("display","list-item"); }
             if (charger) { turnOffElements(chargerArr); $(chargerArr[chargerValues.indexOf(charger)]).css("display","list-item"); }
             if (language) { turnOffElements(languageArr); $(languageArr[languageValues.indexOf(language)]).css("display","list-item"); }
-        } else if (setup === "duo") {
+        } else if (setup === "duo-es") {
             $(".airBuddySize-lxl").css("display","none");
             $(".airBuddySize-2xl3xl").css("display","none");
             turnOffElements(harnessTwoArr);
-            if (harness2nd === "sm") $(harnessTwoArr[0]).css("display","list-item");
-            else if (harness2nd === "lxl") $(harnessTwoArr[1]).css("display","list-item");
-            else if (harness2nd === "2xl3xl") $(harnessTwoArr[2]).css("display","list-item");
+            if (harness2nd === "sm-es") $(harnessTwoArr[0]).css("display","list-item");
+            else if (harness2nd === "lxl-es") $(harnessTwoArr[1]).css("display","list-item");
+            else if (harness2nd === "2xl3xl-es") $(harnessTwoArr[2]).css("display","list-item");
             harnessTwo.css("display","block");
             gallery.find(".airBuddyDuo").first().css("display","block");
             duoDescription.css("display","list-item");
             if (harness1st) {
                 turnOffElements(harnessArr);
-                if (harness1st === "s-m") $(harnessArr[0]).css("display","list-item");
-                else if (harness1st === "l-xl") $(harnessArr[1]).css("display","list-item");
-                else if (harness1st === "2xl-3xl") $(harnessArr[2]).css("display","list-item");
+                if (harness1st === "s-m-es") $(harnessArr[0]).css("display","list-item");
+                else if (harness1st === "l-xl-es") $(harnessArr[1]).css("display","list-item");
+                else if (harness1st === "2xl-3xl-es") $(harnessArr[2]).css("display","list-item");
             }
             if (flag) { turnOffElements(diveFlagArr); $(diveFlagArr[flag === "alpha" ? 1 : 0]).css("display","list-item"); }
             if (charger) { turnOffElements(chargerArr); $(chargerArr[chargerValues.indexOf(charger)]).css("display","list-item"); }
@@ -494,16 +492,16 @@ jQuery(document).ready(function($) {
     });
 
     singleButton.on( "click", function() {
-        $("#pa_harness-size-2nd").val("no").change();
+        $("#pa_harness-size-2nd").val("no-es").change();
     });
     buddyButton.on( "click", function() {
-        $("#pa_harness-size-2nd").val("sm").change();
+        $("#pa_harness-size-2nd").val("sm-es").change();
     });
     comboButton.on( "click", function() {
-        $("#pa_harness-size-2nd").val("sm").change();
+        $("#pa_harness-size-2nd").val("sm-es").change();
     });
     duoButton.on( "click", function() {
-        $("#pa_harness-size-2nd").val("sm").change();
+        $("#pa_harness-size-2nd").val("sm-es").change();
         $(".airBuddySize-lxl").css("display","none");
         $(".airBuddySize-2xl3xl").css("display","none");
         $(harnessTwoArr[0]).css("display","list-item");
