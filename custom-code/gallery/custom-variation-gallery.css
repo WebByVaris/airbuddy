@@ -50,3 +50,21 @@
 .woocommerce-product-gallery {
     position: relative;
 }
+
+#product-lightbox {
+    z-index: 9999999 !important;
+}
+
+.woocommerce-product-gallery .product-image-slider .owl-nav {
+    position: static !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.woocommerce-product-gallery .product-image-slider .owl-nav button {
+    position: static !important;
+    transform: none !important;
+}

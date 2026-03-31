@@ -25,11 +25,13 @@ jQuery(document).ready(function($) {
         if ($('#product-lightbox').length === 0) {
             $('body').append(`
                 <div id="product-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; cursor: pointer;">
-                    <div style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                        <img id="lightbox-image" style="max-width: 90%; max-height: 90%; object-fit: contain;" />
-                        <button id="lightbox-close" style="position: absolute; top: 20px; right: 30px; background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&times;</button>
-                        <button id="lightbox-prev" style="position: absolute; left: 30px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&lt;</button>
-                        <button id="lightbox-next" style="position: absolute; right: 30px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&gt;</button>
+                    <div style="position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <button id="lightbox-close" style="align-self: flex-end; margin-right: 5%; margin-bottom: 2rem; background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&times;</button>
+                        <img id="lightbox-image" style="max-width: 90%; max-height: 90%; object-fit: contain; margin-bottom: 2rem;" />
+                        <div style="display: flex; align-items: center; gap: 24px;">
+                            <button id="lightbox-prev" style="background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&lt;</button>
+                            <button id="lightbox-next" style="background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&gt;</button>
+                        </div>
                     </div>
                 </div>
             `);
