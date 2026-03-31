@@ -23,6 +23,11 @@ jQuery(document).ready(function($) {
                     
                     li.click(function(e) {
                         e.preventDefault();
+                        if ($(this).hasClass('active')) {
+                            select.val('').trigger('change');
+                            $(this).removeClass('active');
+                            return;
+                        }
                         select.val(value).trigger('change');
                         ul.find('li').removeClass('active');
                         $(this).addClass('active');
