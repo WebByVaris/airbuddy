@@ -374,7 +374,6 @@ function custom_product_gallery_display() {
                     echo '</div>';
                 }
             }
-            
             echo '</div>';
             echo '</div>';
         }
