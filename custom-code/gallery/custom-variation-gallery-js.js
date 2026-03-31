@@ -1,4 +1,46 @@
 jQuery(document).ready(function($) {
+    function setActiveThumb($thumbsSlider, index) {
+        if (!$thumbsSlider.length) {
+            return;
+        }
+
+        var normalizedIndex = parseInt(index, 10) || 0;
+        $thumbsSlider.find('.owl-item, .thumb').removeClass('selected');
+        var $target = $thumbsSlider.find('.owl-item').eq(normalizedIndex);
+
+        if ($target.length) {
+            $target.addClass('selected');
+            $target.find('.thumb').addClass('selected');
+            $thumbsSlider.trigger('to.owl.carousel', [normalizedIndex, 200, true]);
+        }
+    }
+
+    function bindGallerySync($mainSlider, $thumbsSlider) {
+        if (!$mainSlider.length || !$thumbsSlider.length) {
+            return;
+        }
+
+        $mainSlider.off('changed.owl.carousel.gallerySync initialized.owl.carousel.gallerySync');
+        $thumbsSlider.off('click.gallerySync', '.thumb');
+
+        $mainSlider.on('initialized.owl.carousel.gallerySync', function() {
+            setActiveThumb($thumbsSlider, 0);
+        });
+
+        $mainSlider.on('changed.owl.carousel.gallerySync', function(event) {
+            if (!event || !event.item) {
+                return;
+            }
+            setActiveThumb($thumbsSlider, event.item.index);
+        });
+
+        $thumbsSlider.on('click.gallerySync', '.thumb', function() {
+            var index = $(this).closest('.owl-item').index();
+            $mainSlider.trigger('to.owl.carousel', [index, 300, true]);
+            setActiveThumb($thumbsSlider, index);
+        });
+    }
+
     function showGalleryLoader() {
         var $gallery = $('.woocommerce-product-gallery');
         if ($gallery.length > 0 && $gallery.find('.gallery-loader').length === 0) {
@@ -203,10 +245,8 @@ jQuery(document).ready(function($) {
                 margin: 10
             });
 
-            $thumbsSlider.on('click', '.thumb', function() {
-                var index = $(this).index();
-                $mainSlider.trigger('to.owl.carousel', [index, 300]);
-            });
+            bindGallerySync($mainSlider, $thumbsSlider);
+            setActiveThumb($thumbsSlider, 0);
         }
         
         setTimeout(function() {
@@ -285,6 +325,8 @@ jQuery(document).ready(function($) {
             handleVariationChange();
         } else {
             initProductGalleryLightbox();
+            bindGallerySync($('.product-image-slider'), $('.product-thumbs-slider'));
+            setActiveThumb($('.product-thumbs-slider'), 0);
         }
     }
 

@@ -68,3 +68,12 @@
     position: static !important;
     transform: none !important;
 }
+
+.woocommerce-product-gallery .product-thumbs-slider .owl-item .thumb {
+    opacity: 0.5;
+}
+
+.woocommerce-product-gallery .product-thumbs-slider .owl-item.selected .thumb,
+.woocommerce-product-gallery .product-thumbs-slider .owl-item .thumb.selected {
+    opacity: 1;
+}
